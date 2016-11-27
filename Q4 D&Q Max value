@@ -1,5 +1,5 @@
 #include <iostream>
-
+//#include <algorithm>
 using namespace std;
 
 
@@ -15,6 +15,24 @@ int Max(int a[],int s, int e, int max){
         int max2 = Max(a,m+1,e,max);
         if(max1>max2) return max1;
         else return max2;
+        
+        /*
+       
+       int MaxV(int a[],int s, int e, int maxx){
+    
+    if(s==e){
+        if(a[s]> maxx) return a[s];
+        else return maxx;
+    }
+    else{
+        int m = (s+e)/2;
+        return max(MaxV(a,s,m,maxx),MaxV(a,m+1,e,maxx));
+        }
+    
+    
+    
+        }
+        */
     }
     
     
