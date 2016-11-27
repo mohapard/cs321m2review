@@ -1,0 +1,9 @@
+node TotalNumNodes( node *tree)
+{
+  if(tree == NULL)
+    return 0;
+  else 
+  return (TotalNumNodes(tree->left) + TotalNumNodes(tree->left) + 1);
+  
+
+}
