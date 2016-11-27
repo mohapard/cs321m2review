@@ -1,0 +1,9 @@
+node heightTree( node *tree)
+{
+if (tree==NULL)
+  return 0;
+  
+else 
+  return 1+ Max(heightTree(tree->left),heightTree(tree->right));
+
+}
