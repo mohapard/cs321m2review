@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+
+int Max(int a[],int s, int e, int max){
+    
+    if(s==e){
+        if(a[s]> max) return a[s];
+        else return max;
+    }
+    else{
+        int m = (s+e)/2;
+        int max1 = Max(a,s,m,max);
+        int max2 = Max(a,m+1,e,max);
+        if(max1>max2) return max1;
+        else return max2;
+    }
+    
+    
+    
+}
+
+int main()
+{
+    
+   //cout << "Hello World" << endl; 
+   int a[4] = {2,5,3,1};
+   cout<<Max(a,0,4,0)<<endl;
+   return 0;
+}
+
+
